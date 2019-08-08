@@ -1,0 +1,6 @@
+<form action= <%= gossips_path %> method="POST">
+      <input type="hidden" name="authenticity_token" value=<%= form_authenticity_token %> >
+      Title <input type="text" name="title"><br>
+      Content <input type="text" name="content"><br>
+      <input type="submit" value="Valider">
+</form>

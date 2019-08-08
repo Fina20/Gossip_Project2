@@ -1,0 +1,33 @@
+<div class="card">
+  	  <div class="card-body" style="background-color: #1098E5;">
+		  <h1 style="text-align: center;">BIENVENUE!</h1>
+			<h2 style="text-align: center;"> Ici c'est notre super site de potins, il est chouette, non ?</h2>
+	    </div>
+    </div>
+
+
+
+  
+
+    <div class="card">
+ 	    <div class="card-body">
+  	    <h3> Voici la listes des Gossips: </h3>
+ 	    </div>
+    </div>
+
+   <%	@gossip.each_with_index do |gossip, index|%>
+   <div class="card text-center">
+   <div class="card-header" style="background-color: #4E5554;">
+    Potin N° <%=index + 1%>
+   </div>
+   <div class="card-body" style="background-color: #2B2F2F;">
+    <h3 class="card-title"><%= gossip.user.first_name %></h3>
+    <h2 class="card-text"><%= gossip.title %></h2>
+    <p> <%= link_to "Afficher le potin", gossip_path(index + 1)%> </p>
+   </div>
+   <div class="card-footer text-muted" style="background-color: #4E5554;">
+    crée le <%= gossip.created_at%>
+   </div>
+   </div>
+   <h3> _ </h3>
+   <% end %>
