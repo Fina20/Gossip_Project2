@@ -1,0 +1,29 @@
+<head>
+  
+</head>
+<body>
+  <div class="card text-center">
+      <div class="card-header">
+        <h1> A propos de l'auteur</h1>
+      </div>
+  </div>
+
+  <div class="alert alert-primary" role="alert">
+   <h4> Nom : <%= @users.last_name %></h4>
+  </div>
+  <div class="alert alert-secondary" role="alert">
+   <h4> Prénom : <%= @users.first_name %></h4>
+  </div>
+  <div class="alert alert-success" role="alert">
+    <h4> Age : <%= @users.age %></h4>
+  </div>
+  <div class="alert alert-danger" role="alert">
+    <h4> Description : <%= @users.description %></h4>
+  </div>
+  <div class="alert alert-warning" role="alert">
+    <h4> Adresse mail : <%= @users.email %></h4>
+  </div>
+  <div class="alert alert-info" role="alert">
+    <h4> Ville d'origine : <%= @users.city.name %></h4>
+  </div>
+</body>
